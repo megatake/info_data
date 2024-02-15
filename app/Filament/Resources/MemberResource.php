@@ -36,13 +36,16 @@ class MemberResource extends Resource
                     ->required(),
                 TextInput::make('tw_url')
                     ->label('Twitter URL')
-                    ->placeholder('Twitter URL'),
+                    ->placeholder('Twitter URL')
+                    ->url(),
                 TextInput::make('fb_url')
                     ->label('Facebook URL')
-                    ->placeholder('Facebook URL'),
+                    ->placeholder('Facebook URL')
+                    ->url(),
                 TextInput::make('in_url')
                     ->label('Instagram URL')
-                    ->placeholder('Instagram URL'),
+                    ->placeholder('Instagram URL')
+                    ->url(),
                 FileUpload::make('image'),
                 Select::make('status')
                     ->options([
