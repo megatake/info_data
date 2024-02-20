@@ -23,7 +23,7 @@
                                         data-bs-target="#collapse-{{ $x }}" aria-expanded="true" aria-controls="collapse-{{ $x }}">
                                         {{ $faq->question }}
                                     </h2>
-                                    <div id="collapse-{{ $x }}" class="accordion-collapse collapse border-0" aria-labelledby="heading-{{ $x }}" data-bs-parent="#accordionFAQ">
+                                    <div id="collapse-{{ $x++ }}" class="accordion-collapse collapse border-0" aria-labelledby="heading-{{ $x++ }}" data-bs-parent="#accordionFAQ">
                                         <div class="accordion-body py-0 content">{!! $faq->answer !!}</div>
                                     </div>
                                 </div>

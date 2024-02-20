@@ -48,7 +48,7 @@
                         <li class="nav-item "><a wire:navigate class="nav-link " href="{{ route('blog') }}">Blog</a></li>
                         <li class="nav-item "><a wire:navigate class="nav-link " href="{{ route('faqs') }}">FAQ</a></li>
                     </ul>
-                    <a href="#!" class="btn btn-outline-primary">Contact Us</a>
+                    {{-- <a href="{{ route('contact') }}" class="btn btn-outline-primary">Contact Us</a> --}}
                 </div>
             </div>
         </nav>
@@ -187,16 +187,9 @@
                     <div class="footer-widget">
                         <h5 class="mb-4 text-primary font-secondary">Service</h5>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><a href="service-details.html">Digital Marketing</a>
-                            </li>
-                            <li class="mb-2"><a href="service-details.html">Web Design</a>
-                            </li>
-                            <li class="mb-2"><a href="service-details.html">Logo Design</a>
-                            </li>
-                            <li class="mb-2"><a href="service-details.html">Graphic Design</a>
-                            </li>
-                            <li class="mb-2"><a href="service-details.html">SEO</a>
-                            </li>
+                            @foreach (getServices() as $service)
+                                <li class="mb-2"><a wire:navigate href="{{ route('servicePage', $service->id) }}">{{ $service->title }}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -206,11 +199,11 @@
                         <ul class="list-unstyled">
                             <li class="mb-2"><a href="{{ route('page', 1) }}" wire:navigate>About Us</a>
                             </li>
-                            <li class="mb-2"><a href="{{ route('page', 2) }}" wire:navigate>Contact Us</a>
+                            {{-- <li class="mb-2"><a href="{{ route('contact') }}" wire:navigate>Contact Us</a>
+                            </li> --}}
+                            <li class="mb-2"><a href="{{ route('blog') }}" wire:navigate>Blog</a>
                             </li>
-                            <li class="mb-2"><a href="#!">Blog</a>
-                            </li>
-                            <li class="mb-2"><a href="#!">Team</a>
+                            <li class="mb-2"><a href="{{ route('teamPage') }}" wire:navigate>Team</a>
                             </li>
                         </ul>
                     </div>

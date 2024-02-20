@@ -2,6 +2,7 @@
 
 use App\Livewire\BlogDetail;
 use App\Livewire\ShowBlog;
+use App\Livewire\ShowContactPage;
 use App\Livewire\ShowFaqPage;
 use App\Livewire\ShowHome;
 use App\Livewire\ShowPage;
